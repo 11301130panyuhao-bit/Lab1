@@ -1,1 +1,50 @@
+/* 1. Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Base Header & Footer Styling */
+header {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+footer {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.intro {
+  padding: 20px;
+}
+
+/* 2. Mobile-First Base Styles (<768px) */
+.cards-container {
+  padding: 20px;
+}
+
+.cards-container article {
+  width: 100%;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  padding: 16px;
+}
+
+/* 3. Desktop Responsive Layout (>=768px) */
+@media (min-width: 768px) {
+  .cards-container article {
+    display: inline-block;
+    width: 30%;
+    margin-right: 3%;
+    vertical-align: top;
+    margin-bottom: 0; /* Reset bottom margin for inline layout */
+  }
+  
+  /* Remove right margin on the last card to prevent awkward wrapping */
+  .cards-container article:last-child {
+    margin-right: 0;
+  }
+}
